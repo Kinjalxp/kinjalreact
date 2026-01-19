@@ -1,6 +1,10 @@
 // src/blogs/BlogOne.tsx
 const BlogOne = () => (
-  <div>
+  // Mobile → px-4 (tight, readable)
+  // Small tablets → sm:px-6
+  // Large screens → lg:px-20 (lots of breathing room)
+
+  <div className="px-1 sm:px-6 lg:px-20 py-8 animate-fadeIn">
     <h1 className="text-3xl font-bold mb-4">
       Why does data matter more than algorithms?
     </h1>

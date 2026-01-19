@@ -3,7 +3,10 @@ import { blogs } from "../data/blogs";
 
 const Blog = () => {
   return (
-    <div className="p-6">
+    // Mobile → px-4 (tight, readable)
+    // Small tablets → sm:px-6
+    // Large screens → lg:px-20 (lots of breathing room)
+    <div className="px-4 sm:px-6 lg:px-20 py-8 animate-fadeIn">
       <h1 className="text-3xl font-bold mb-4">Blog</h1>
 
       <ul className="space-y-3">

@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
-import { User, BookOpen, Icon } from "lucide-react";
+import { User, BookOpen } from "lucide-react";
 
 const navItemClass = ({ isActive }: { isActive: boolean }) =>
   ` flex items-center gap-2
