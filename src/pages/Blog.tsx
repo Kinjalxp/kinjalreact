@@ -7,7 +7,12 @@ const Blog = () => {
     // Small tablets → sm:px-6
     // Large screens → lg:px-20 (lots of breathing room)
     <div className="px-4 sm:px-6 lg:px-20 py-8 animate-fadeIn">
-      <h1 className="text-3xl font-bold mb-4">Blog</h1>
+      <div className="mb-8">
+        <h2 className="text-4xl font-bold mb-4 text-black">Latest Articles</h2>
+        <p className="text-black text-lg">
+          Thoughts on technology, development, and innovation
+        </p>
+      </div>
 
       <ul className="space-y-3">
         {blogs.map((blog) => (

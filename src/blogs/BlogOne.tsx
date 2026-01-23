@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 // src/blogs/BlogOne.tsx
 const BlogOne = () => (
   // Mobile → px-4 (tight, readable)
@@ -5,6 +7,9 @@ const BlogOne = () => (
   // Large screens → lg:px-20 (lots of breathing room)
 
   <div className="px-1 sm:px-6 lg:px-20 py-8 animate-fadeIn">
+    <div className=" top-16 bg-white py-2">
+      <Link to="/blog">← Back to Blog</Link>
+    </div>
     <h1 className="text-3xl font-bold mb-4">
       Why does data matter more than algorithms?
     </h1>

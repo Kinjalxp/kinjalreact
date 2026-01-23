@@ -1,8 +1,7 @@
-// src/blogs/BlogTwo.tsx
 import { Link } from "react-router-dom";
 import placeholder from "../assets/placeholder_image.png";
 
-const BlogTwo = () => (
+const BlogThree = () => (
   // Mobile → px-4 (tight, readable)
   // Small tablets → sm:px-6
   // Large screens → lg:px-20 (lots of breathing room)
@@ -19,4 +18,4 @@ const BlogTwo = () => (
   </div>
 );
 
-export default BlogTwo;
+export default BlogThree;

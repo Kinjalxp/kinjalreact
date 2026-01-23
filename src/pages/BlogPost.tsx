@@ -3,10 +3,12 @@ import { blogs } from "../data/blogs";
 
 import BlogOne from "../blogs/BlogOne";
 import BlogTwo from "../blogs/BlogTwo";
+import BlogThree from "../blogs/BlogThree";
 
 const blogComponents: Record<string, React.FC> = {
   BlogOne,
   BlogTwo,
+  BlogThree,
 };
 
 const BlogPost = () => {
