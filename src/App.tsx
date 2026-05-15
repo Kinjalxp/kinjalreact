@@ -2,7 +2,9 @@ import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
-import { User, BookOpen } from "lucide-react";
+import Quiz from "./pages/Quiz";
+import QuizGame from "./pages/QuizGame";
+import { User, BookOpen, Flame } from "lucide-react";
 
 const navItemClass = ({ isActive }: { isActive: boolean }) =>
   ` flex items-center gap-2
@@ -17,6 +19,7 @@ const navItemClass = ({ isActive }: { isActive: boolean }) =>
 const navItems = [
   { label: "About", path: "/", icon: User, end: true },
   { label: "Blog", path: "/blog", icon: BookOpen },
+  { label: "Quiz", path: "/quiz", icon: Flame },
 ];
 
 const App = () => {
@@ -37,6 +40,8 @@ const App = () => {
         <Route path="/" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/quiz/:category" element={<QuizGame />} />
       </Routes>
     </BrowserRouter>
   );

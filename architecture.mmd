@@ -1,0 +1,39 @@
+graph TD
+    main["main.tsx\nReact DOM entry point"]
+    App["App.tsx\nBrowserRouter + Nav + Routes"]
+
+    main --> App
+
+    App -->|"Route: /"| About
+    App -->|"Route: /blog"| Blog
+    App -->|"Route: /blog/:slug"| BlogPost
+
+    About["pages/About.tsx"]
+    Blog["pages/Blog.tsx"]
+    BlogPost["pages/BlogPost.tsx"]
+
+    About --> HeroSection["components/about/HeroSection.tsx"]
+    About --> AboutAndSkills["components/about/AboutAndSkills.tsx"]
+    About --> EducationTimeline["components/about/EducationTimeline.tsx"]
+    About --> Achievements["components/about/Achievements.tsx"]
+    About --> Volunteering["components/about/Volunteering.tsx"]
+
+    Blog -->|reads| blogs_data["data/blogs.ts\nslug, title, excerpt,\ndate, image, component name"]
+    BlogPost -->|"1. looks up slug"| blogs_data
+    BlogPost -->|"2. resolves component"| BlogComponents
+
+    subgraph BlogComponents["blogs/"]
+        BlogOne["BlogOne.tsx"]
+        BlogTwo["BlogTwo.tsx"]
+        BlogThree["BlogThree.tsx"]
+    end
+
+    subgraph SharedData["Shared Data & Types"]
+        constants["constants/index.tsx\neducation, volunteering,\nskills, social links"]
+        types["types/index.ts\nTS interfaces"]
+        assets["assets/\nimages PNG"]
+    end
+
+    About --> constants
+    About --> types
+    About --> assets
