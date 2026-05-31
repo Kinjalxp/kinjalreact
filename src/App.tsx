@@ -33,7 +33,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="h-screen flex flex-col overflow-hidden">
-        <nav className="flex-shrink-0 flex gap-4 p-4 border-b bg-white">
+        {/* Desktop nav */}
+        <nav className="flex-shrink-0 hidden md:flex gap-4 p-4 border-b bg-white">
           <div className="ml-auto flex gap-4">
             {navItems.map(({ label, path, icon: Icon, end }) => (
               <NavLink key={path} to={path} end={end} className={navItemClass}>
@@ -44,7 +45,7 @@ const App = () => {
           </div>
         </nav>
 
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 overflow-y-auto pb-16 md:pb-0">
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/blog" element={<Blog />} />
@@ -57,6 +58,25 @@ const App = () => {
             </Route>
           </Routes>
         </div>
+
+        {/* Mobile bottom tab bar */}
+        <nav className="fixed bottom-0 left-0 right-0 flex md:hidden border-t bg-white z-50">
+          {navItems.map(({ label, path, icon: Icon, end }) => (
+            <NavLink
+              key={path}
+              to={path}
+              end={end}
+              className={({ isActive }) =>
+                `flex-1 flex flex-col items-center justify-center py-3 gap-1 transition-colors ${
+                  isActive ? "text-black" : "text-gray-400"
+                }`
+              }
+            >
+              <Icon size={20} />
+              <span className="text-xs">{label}</span>
+            </NavLink>
+          ))}
+        </nav>
       </div>
     </BrowserRouter>
   );

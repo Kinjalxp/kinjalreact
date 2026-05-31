@@ -10,6 +10,8 @@ import {
   Bot,
   Workflow,
   Database,
+  Menu,
+  X,
 } from "lucide-react";
 
 const iconMap: Record<string, React.FC<{ size?: number; strokeWidth?: number }>> = {
@@ -25,6 +27,8 @@ const iconMap: Record<string, React.FC<{ size?: number; strokeWidth?: number }>>
 const AIJourneyLayout = () => {
   const { topic: activeTopicSlug } = useParams();
   const { pathname } = useLocation();
+
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const [expanded, setExpanded] = useState<Set<string>>(() => {
     const s = new Set<string>();
@@ -49,14 +53,30 @@ const AIJourneyLayout = () => {
 
   return (
     <div className="flex min-h-full">
+      {/* Mobile backdrop */}
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 z-30 bg-black/30 md:hidden"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       {/* ── Sidebar ── */}
-      <aside className="sticky top-0 h-screen w-64 lg:w-72 flex-shrink-0 flex flex-col overflow-hidden bg-stone-50 border-r border-gray-200">
+      <aside className={`fixed md:sticky top-0 inset-y-0 left-0 z-40 h-screen w-64 lg:w-72 flex-shrink-0 flex flex-col overflow-hidden bg-stone-50 border-r border-gray-200 transition-transform duration-300 ease-in-out ${sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}>
         {/* Header */}
-        <div className="px-5 pt-6 pb-4">
-          <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-gray-400">
-            AI Journey
-          </p>
-          <p className="text-[11px] text-gray-400 mt-1">Personal notes &amp; learnings</p>
+        <div className="px-5 pt-6 pb-4 flex items-start justify-between">
+          <div>
+            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-gray-400">
+              AI Journey
+            </p>
+            <p className="text-[11px] text-gray-400 mt-1">Personal notes &amp; learnings</p>
+          </div>
+          <button
+            className="md:hidden text-gray-400 hover:text-black transition-colors mt-0.5"
+            onClick={() => setSidebarOpen(false)}
+          >
+            <X size={18} />
+          </button>
         </div>
 
         <div className="h-px bg-gray-200 mx-4 mb-3" />
@@ -124,6 +144,7 @@ const AIJourneyLayout = () => {
                           <NavLink
                             key={subtopic.slug}
                             to={`/ai-journey/${topic.slug}/${subtopic.slug}`}
+                            onClick={() => setSidebarOpen(false)}
                             className={`flex items-center gap-2.5 px-3 py-1.5 ml-2 rounded-lg text-[12.5px] transition-all duration-150 ${
                               isActive
                                 ? "text-black font-semibold bg-gray-100"
@@ -157,6 +178,13 @@ const AIJourneyLayout = () => {
 
       {/* ── Content ── */}
       <main className="flex-1 min-w-0 bg-white">
+        <button
+          className="md:hidden flex items-center gap-2 m-4 px-3 py-1.5 text-sm text-gray-600 border border-gray-200 rounded-lg hover:bg-gray-100 transition-colors"
+          onClick={() => setSidebarOpen(true)}
+        >
+          <Menu size={16} />
+          Topics
+        </button>
         <Outlet />
       </main>
     </div>
