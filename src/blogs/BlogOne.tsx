@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import img1 from "../assets/DataQualityDiagram.png";
 import img2 from "../assets/Behind_the_AI.png";
+import { RoughNotation } from "react-rough-notation";
 
 // src/blogs/BlogOne.tsx
 const BlogOne = () => (
@@ -22,7 +23,7 @@ const BlogOne = () => (
       className="w-full h-64 object-cover rounded-lg mb-6"
     />
     <div className="px-4 sm:px-6">
-      <p className="mb-4">
+      <p className="mb-4 relative">
         When people talk about building better AI, they almost always talk about
         better algorithms. New model architectures, breakthrough research
         papers, and increasingly powerful neural networks tend to attract the
@@ -30,6 +31,7 @@ const BlogOne = () => (
         holding AI systems back. More often, the real limitation is the data
         itself.
       </p>
+
       <p className="mb-4">
         Teaching an AI with poor data is similar to teaching a student using an
         inaccurate textbook. No matter how intelligent the student is or how
@@ -64,17 +66,22 @@ const BlogOne = () => (
         during training. In this case, the limitation is not the algorithm. The
         limitation is the data.
       </p>
-      <p className="mb-4">
+      <p className="mb-4 relative">
         This idea extends far beyond facial recognition. A spam detection model
         trained on outdated email data may fail to identify modern spam
         techniques. A medical diagnostic model trained on data from one
         geographic region may perform poorly when applied elsewhere. A
         self-driving car trained mostly in clear weather conditions may struggle
         when operating in heavy snow or rain. In each situation,{" "}
-        <mark className="highlight">
+        <RoughNotation
+          type="highlight"
+          show={true}
+          color="#a0e6be"
+          multiline={true}
+        >
           the quality and diversity of the data directly influence the model's
           performance.
-        </mark>
+        </RoughNotation>
       </p>
       <p className="mb-4">So what does it mean to have good data?</p>
       <p className="mb-4">
@@ -87,16 +94,21 @@ const BlogOne = () => (
         the model will operate. If important groups, situations, or edge cases
         are missing, the model may fail when encountering them.
       </p>
-      <p className="mb-4">
+      <p className="mb-4 relative">
         Another critical factor is data coverage. Many people assume that bigger
         datasets automatically lead to better models, but quantity alone is not
         enough. A smaller, carefully curated dataset can often outperform a
         massive dataset filled with redundant, low-quality, or misleading
         information.{" "}
-        <mark className="highlight">
+        <RoughNotation
+          type="highlight"
+          show={true}
+          color="#a0e6be"
+          multiline={true}
+        >
           What matters most is whether the data captures the diversity and
           complexity of the real world.
-        </mark>
+        </RoughNotation>
       </p>
       <p className="mb-4">
         Data quality also changes over time. The world is constantly evolving,
@@ -135,12 +147,17 @@ const BlogOne = () => (
         attention, the work that happens behind the scenes with data is
         frequently what determines whether a project succeeds or fails.
       </p>
-      <p className="mb-4">
+      <p className="mb-4 relative">
         In machine learning, algorithms matter, but they are rarely the limiting
         factor.{" "}
-        <mark className="highlight">
+        <RoughNotation
+          type="highlight"
+          show={true}
+          color="#a0e6be"
+          multiline={true}
+        >
           A model is only as good as the data it learns from.{" "}
-        </mark>
+        </RoughNotation>
         Focusing on how data is collected, labeled, maintained, and updated is
         often what separates useful AI systems from unreliable ones. As AI
         continues to advance, the organizations that invest in high-quality data
