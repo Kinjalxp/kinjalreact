@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import img1 from "../assets/DataQualityDiagram.png";
+import img2 from "../assets/Behind_the_AI.png";
 
 // src/blogs/BlogOne.tsx
 const BlogOne = () => (
@@ -44,6 +46,16 @@ const BlogOne = () => (
         incomplete, noisy, outdated, or biased, the model will learn those
         imperfections and reproduce them in its outputs.
       </p>
+      <div className="flex justify-center my-6">
+        <div className="w-80 h-120 rounded-full bg-gray-200 flex items-center justify-center shadow-lg">
+          <img
+            src={img1}
+            alt="Image"
+            className="w-full h-full object-cover rounded-lg mb-6"
+          />
+        </div>
+      </div>
+
       <p className="mb-4">
         Consider a facial recognition system trained primarily on images of a
         single demographic group. Even if the underlying algorithm is highly
@@ -98,6 +110,16 @@ const BlogOne = () => (
         value from good data, but it cannot invent information that was never
         present in the dataset.
       </p>
+
+      <div className="flex justify-center my-6">
+        <div className="w-80 h-120 rounded-full bg-gray-200 flex items-center justify-center shadow-lg">
+          <img
+            src={img2}
+            alt="Image"
+            className="w-full h-full object-cover rounded-lg mb-6"
+          />
+        </div>
+      </div>
       <p className="mb-4">
         This reality is reflected throughout the AI industry. Many organizations
         spend far more time collecting, cleaning, labeling, and maintaining data
