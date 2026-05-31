@@ -70,8 +70,11 @@ const BlogOne = () => (
         techniques. A medical diagnostic model trained on data from one
         geographic region may perform poorly when applied elsewhere. A
         self-driving car trained mostly in clear weather conditions may struggle
-        when operating in heavy snow or rain. In each situation, the quality and
-        diversity of the data directly influence the model's performance.
+        when operating in heavy snow or rain. In each situation,{" "}
+        <mark className="highlight">
+          the quality and diversity of the data directly influence the model's
+          performance.
+        </mark>
       </p>
       <p className="mb-4">So what does it mean to have good data?</p>
       <p className="mb-4">
@@ -89,8 +92,11 @@ const BlogOne = () => (
         datasets automatically lead to better models, but quantity alone is not
         enough. A smaller, carefully curated dataset can often outperform a
         massive dataset filled with redundant, low-quality, or misleading
-        information. What matters most is whether the data captures the
-        diversity and complexity of the real world.
+        information.{" "}
+        <mark className="highlight">
+          What matters most is whether the data captures the diversity and
+          complexity of the real world.
+        </mark>
       </p>
       <p className="mb-4">
         Data quality also changes over time. The world is constantly evolving,
@@ -131,12 +137,15 @@ const BlogOne = () => (
       </p>
       <p className="mb-4">
         In machine learning, algorithms matter, but they are rarely the limiting
-        factor. A model is only as good as the data it learns from. Focusing on
-        how data is collected, labeled, maintained, and updated is often what
-        separates useful AI systems from unreliable ones. As AI continues to
-        advance, the organizations that invest in high-quality data will often
-        gain a greater advantage than those that focus solely on developing
-        better algorithms.
+        factor.{" "}
+        <mark className="highlight">
+          A model is only as good as the data it learns from.{" "}
+        </mark>
+        Focusing on how data is collected, labeled, maintained, and updated is
+        often what separates useful AI systems from unreliable ones. As AI
+        continues to advance, the organizations that invest in high-quality data
+        will often gain a greater advantage than those that focus solely on
+        developing better algorithms.
       </p>
     </div>
   </div>

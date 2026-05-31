@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.highlight {
+  background:
+    radial-gradient(ellipse at 7% 55%,  rgba(160, 230, 190, 0.45) 0%, transparent 52%),
+    radial-gradient(ellipse at 38% 20%, rgba(150, 225, 182, 0.3)  0%, transparent 42%),
+    radial-gradient(ellipse at 70% 80%, rgba(162, 232, 193, 0.38) 0%, transparent 48%),
+    radial-gradient(ellipse at 94% 38%, rgba(155, 228, 186, 0.32) 0%, transparent 52%),
+    linear-gradient(
+      103deg,
+      transparent                        0%,
+      rgba(158, 229, 188, 0.92)          1.5%,
+      rgba(150, 224, 180, 0.62)         11%,
+      rgba(160, 230, 190, 0.66)         37%,
+      rgba(147, 221, 176, 0.55)         59%,
+      rgba(157, 228, 186, 0.70)         79%,
+      rgba(161, 231, 191, 0.90)         97%,
+      transparent                       100%
+    );
+  padding: 0.07em 0.38em 0.2em;
+  border-radius: 1px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
