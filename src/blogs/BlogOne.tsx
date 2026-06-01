@@ -34,6 +34,7 @@ const BlogOne = () => (
           show={true}
           color="#a0e6be"
           strokeWidth={2}
+          multiline={true}
         >
           the real limitation is the data itself.
         </RoughNotation>
