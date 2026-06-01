@@ -11,12 +11,12 @@ export const blogs = [
   },
 
   {
-    slug: "forget-the-hype—here’s-how-to-actually-start-an-AI-career-in-2026",
-    title: "Forget the hype—here’s how to actually start an AI career in 2026.",
+    slug: "forget-the-hype—here’s-how-to-actually-get_started-in-AI-in-2026",
+    title: "Forget the hype—here’s how to actually get started in AI in 2026",
     component: "BlogTwo",
     excerpt:
       "If you were waiting for the ‘perfect time’ to start an AI career, 2026 just showed up.",
-    date: "Coming Soon!",
+    date: "May 31, 2026",
     image:
       "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=250&fit=crop",
   },

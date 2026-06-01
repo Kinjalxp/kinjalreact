@@ -1,6 +1,5 @@
 // src/blogs/BlogTwo.tsx
 import { Link } from "react-router-dom";
-import placeholder from "../assets/placeholder_image.png";
 import { RoughNotation } from "react-rough-notation";
 import img from "../assets/Blog2_title_image.png";
 
