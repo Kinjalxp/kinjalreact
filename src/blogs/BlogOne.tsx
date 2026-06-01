@@ -28,8 +28,15 @@ const BlogOne = () => (
         better algorithms. New model architectures, breakthrough research
         papers, and increasingly powerful neural networks tend to attract the
         most attention. However, in practice, algorithms are rarely the factor
-        holding AI systems back. More often, the real limitation is the data
-        itself.
+        holding AI systems back. More often,{" "}
+        <RoughNotation
+          type="underline"
+          show={true}
+          color="#a0e6be"
+          strokeWidth={2}
+        >
+          the real limitation is the data itself.
+        </RoughNotation>
       </p>
 
       <p className="mb-4">
@@ -40,13 +47,21 @@ const BlogOne = () => (
         Even the most sophisticated algorithm cannot consistently produce
         reliable results if it is trained on flawed data.
       </p>
-      <p className="mb-4">
+      <p className="mb-4 relative">
         AI models do not truly understand the world the way humans do. Instead,
         they learn statistical patterns from the examples they are shown during
-        training. Every prediction, recommendation, or generated response is
-        influenced by the data used to build the model. If the training data is
-        incomplete, noisy, outdated, or biased, the model will learn those
-        imperfections and reproduce them in its outputs.
+        training.{" "}
+        <RoughNotation
+          type="highlight"
+          show={true}
+          color="#a0e6be"
+          multiline={true}
+        >
+          Every prediction, recommendation, or generated response is influenced
+          by the data used to build the model.{" "}
+        </RoughNotation>
+        {""}If the training data is incomplete, noisy, outdated, or biased, the
+        model will learn those imperfections and reproduce them in its outputs.
       </p>
       <div className="flex justify-center my-6">
         <div className="w-80 h-120 rounded-full bg-gray-200 flex items-center justify-center shadow-lg">
@@ -83,7 +98,11 @@ const BlogOne = () => (
           performance.
         </RoughNotation>
       </p>
-      <p className="mb-4">So what does it mean to have good data?</p>
+
+      <h1 className="text-1xl font-bold mb-4">
+        So what does it mean to have good data?
+      </h1>
+
       <p className="mb-4">
         Good data is more than just a large collection of examples. First, it
         should be accurate and correctly labeled. If images of cats are
@@ -96,10 +115,18 @@ const BlogOne = () => (
       </p>
       <p className="mb-4 relative">
         Another critical factor is data coverage. Many people assume that bigger
-        datasets automatically lead to better models, but quantity alone is not
-        enough. A smaller, carefully curated dataset can often outperform a
-        massive dataset filled with redundant, low-quality, or misleading
-        information.{" "}
+        datasets automatically lead to better models,{" "}
+        <RoughNotation
+          type="underline"
+          show={true}
+          color="#a0e6be"
+          multiline={true}
+          strokeWidth={2}
+        >
+          but quantity alone is not enough.{" "}
+        </RoughNotation>
+        A smaller, carefully curated dataset can often outperform a massive
+        dataset filled with redundant, low-quality, or misleading information.{" "}
         <RoughNotation
           type="highlight"
           show={true}
@@ -118,15 +145,23 @@ const BlogOne = () => (
         learned no longer reflect reality. This is why many production AI
         systems require continuous data collection and retraining.
       </p>
-      <p className="mb-4">
+      <p className="mb-4 relative">
         None of this means that algorithms are unimportant. Better algorithms
         can improve efficiency, learn more complex patterns, and achieve higher
         performance from the same dataset. Advances in model architecture have
         driven many of the breakthroughs seen in AI over the past decade.
         However, algorithmic improvements often provide diminishing returns when
-        the underlying data remains poor. A better algorithm can extract more
-        value from good data, but it cannot invent information that was never
-        present in the dataset.
+        the underlying data remains poor.{" "}
+        <RoughNotation
+          type="underline"
+          show={true}
+          color="#a0e6be"
+          multiline={true}
+          strokeWidth={2}
+        >
+          A better algorithm can extract more value from good data, but it
+          cannot invent information that was never present in the dataset.
+        </RoughNotation>
       </p>
 
       <div className="flex justify-center my-6">
@@ -138,14 +173,23 @@ const BlogOne = () => (
           />
         </div>
       </div>
-      <p className="mb-4">
-        This reality is reflected throughout the AI industry. Many organizations
-        spend far more time collecting, cleaning, labeling, and maintaining data
-        than they do designing new algorithms. Data engineering, data
-        governance, and data quality assurance are often the hidden foundations
-        of successful AI systems. While cutting-edge models receive most of the
-        attention, the work that happens behind the scenes with data is
-        frequently what determines whether a project succeeds or fails.
+      <p className="mb-4 relative">
+        This reality is reflected throughout the AI industry.{" "}
+        <RoughNotation
+          type="underline"
+          show={true}
+          color="#a0e6be"
+          multiline={true}
+          strokeWidth={2}
+        >
+          Many organizations spend far more time collecting, cleaning, labeling,
+          and maintaining data than they do designing new algorithms.{" "}
+        </RoughNotation>
+        Data engineering, data governance, and data quality assurance are often
+        the hidden foundations of successful AI systems. While cutting-edge
+        models receive most of the attention, the work that happens behind the
+        scenes with data is frequently what determines whether a project
+        succeeds or fails.
       </p>
       <p className="mb-4 relative">
         In machine learning, algorithms matter, but they are rarely the limiting

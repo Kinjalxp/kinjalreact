@@ -1,6 +1,8 @@
 // src/blogs/BlogTwo.tsx
 import { Link } from "react-router-dom";
 import placeholder from "../assets/placeholder_image.png";
+import { RoughNotation } from "react-rough-notation";
+import img from "../assets/Blog2_title_image.png";
 
 const BlogTwo = () => (
   // Mobile → px-4 (tight, readable)
@@ -15,6 +17,11 @@ const BlogTwo = () => (
       Forget the hype—here’s how to actually get started in AI in 2026
     </h1>
     <p className="text-gray-600 mb-6">May 31, 2026</p>
+    <img
+      src={img}
+      alt="Image"
+      className="w-full h-64 object-cover rounded-lg mb-6"
+    />
     <div className="px-4 sm:px-6">
       <p className="mb-4">
         If I’m being honest, I didn’t start learning AI because I had some grand
@@ -45,16 +52,34 @@ const BlogTwo = () => (
         advanced topics like deep learning, neural networks, or large language
         models without understanding the basics of what AI is doing underneath.
       </p>
-      <p className="mb-4">
-        For me, the starting point wasn’t code. It was the concepts.
+      <p className="mb-4 relative">
+        For me, the starting point wasn’t code.{" "}
+        <RoughNotation
+          type="underline"
+          show={true}
+          color="#FFB3C6"
+          strokeWidth={2}
+        >
+          It was the concepts.
+        </RoughNotation>
       </p>
       <p className="mb-4">Things like:</p>
-      <ul className="list-disc pl-6 space-y-1 mb-4">
-        <li>What is a model actually learning?</li>
-        <li>What does training data do?</li>
-        <li>Why does data quality matter so much?</li>
-        <li>How do simple algorithms “learn” patterns?</li>
-      </ul>
+      <div className="mb-4 relative">
+        <RoughNotation
+          type="bracket"
+          show={true}
+          color="#FFB3C6"
+          brackets={["left"]}
+          strokeWidth={2}
+        >
+          <ul className="list-disc pl-4 space-y-1 mb-4 ">
+            <li>What is a model actually learning?</li>
+            <li>What does training data do?</li>
+            <li>Why does data quality matter so much?</li>
+            <li>How do simple algorithms “learn” patterns?</li>
+          </ul>
+        </RoughNotation>
+      </div>
       <p className="mb-4">
         Once these ideas clicked, everything else felt way less intimidating.
       </p>
@@ -67,21 +92,45 @@ const BlogTwo = () => (
         A big part of my early learning came from structured beginner resources
         rather than random videos or scattered tutorials.
       </p>
-      <p className="mb-4">
-        One of the first things I did was take the AWS AI Practitioner course on
-        Udemy (taught by Stéphane Maarek). It’s designed for beginners, and what
-        I liked most is that it didn’t just explain theory—it actually included
-        hands-on exercises that helped connect concepts to real use cases
+      <p className="mb-4 relative">
+        One of the first things I did was take the{" "}
+        <RoughNotation type="highlight" show={true} color="#FFB3C6">
+          AWS AI Practitioner course on Udemy
+        </RoughNotation>{" "}
+        (taught by Stéphane Maarek).{" "}
+        <RoughNotation
+          type="underline"
+          show={true}
+          color="#FFB3C6"
+          strokeWidth={2}
+        >
+          It’s designed for beginners
+        </RoughNotation>
+        , and what I liked most is that it didn’t just explain theory—it
+        actually included hands-on exercises that helped connect concepts to
+        real use cases
       </p>
       <p className="mb-4">
         That combination of explanation + practice made a huge difference for
         me.
       </p>
-      <p className="mb-4">
-        Alongside that, I also started watching CodeBasics, a YouTuber who
-        breaks down AI and data science concepts really clearly. Their videos
-        often include small labs and examples, which makes it easier to actually
-        understand what’s happening instead of just memorizing terms.
+      <p className="mb-4 relative">
+        Alongside that, I also started watching{" "}
+        <RoughNotation type="highlight" show={true} color="#FFB3C6">
+          CodeBasics
+        </RoughNotation>{" "}
+        , a YouTuber who breaks down AI and data science concepts really
+        clearly. Their videos often include{" "}
+        <RoughNotation
+          type="underline"
+          show={true}
+          color="#FFB3C6"
+          strokeWidth={2}
+        >
+          small labs and examples{" "}
+        </RoughNotation>
+        , which makes it easier to actually understand what’s happening instead
+        of just memorizing terms.
       </p>
       <p className="mb-4">
         Those two things alone were enough to give me a solid foundation.
@@ -95,11 +144,21 @@ const BlogTwo = () => (
       </p>
       <h1 className="text-1xl font-bold mb-4">1. Learn the core ideas first</h1>
       <p className="mb-4">Don’t rush this step. Focus on understanding:</p>
-      <ul className="list-disc pl-6 space-y-1 mb-4">
-        <li>What AI systems actually do</li>
-        <li>How models learn from data</li>
-        <li>What training and prediction mean in simple terms</li>
-      </ul>
+      <div className="mb-4 relative">
+        <RoughNotation
+          type="bracket"
+          show={true}
+          color="#FFB3C6"
+          brackets={["left"]}
+          strokeWidth={2}
+        >
+          <ul className="list-disc pl-4 space-y-1 mb-4">
+            <li>What AI systems actually do</li>
+            <li>How models learn from data</li>
+            <li>What training and prediction mean in simple terms</li>
+          </ul>
+        </RoughNotation>
+      </div>
       <h1 className="text-1xl font-bold mb-4">
         2. Follow a structured beginner course
       </h1>
@@ -116,11 +175,21 @@ const BlogTwo = () => (
       </p>
       <h1 className="text-1xl font-bold mb-4">4. Start experimenting early</h1>
       <p className="mb-4">Even small things matter:</p>
-      <ul className="list-disc pl-6 space-y-1 mb-4">
-        <li>Try simple datasets</li>
-        <li>Play with beginner-friendly tools</li>
-        <li>Observe how changing data changes results</li>
-      </ul>
+      <div className="mb-4 relative">
+        <RoughNotation
+          type="bracket"
+          show={true}
+          color="#FFB3C6"
+          brackets={["left"]}
+          strokeWidth={2}
+        >
+          <ul className="list-disc pl-6 space-y-1 mb-4">
+            <li>Try simple datasets</li>
+            <li>Play with beginner-friendly tools</li>
+            <li>Observe how changing data changes results</li>
+          </ul>
+        </RoughNotation>
+      </div>
       <p className="mb-4">
         You don’t need big projects at the beginning. You just need familiarity.
       </p>
@@ -158,8 +227,16 @@ const BlogTwo = () => (
         2026 isn’t a “perfect” time to start learning AI—there probably isn’t
         one.
       </p>
-      <p className="mb-4">
-        But it is one of the most accessible times we’ve ever had.
+      <p className="mb-4 relative">
+        <RoughNotation
+          type="underline"
+          show={true}
+          color="#FFB3C6"
+          strokeWidth={2}
+        >
+          {" "}
+          But it is one of the most accessible times we’ve ever had.
+        </RoughNotation>
       </p>
       <p className="mb-4">
         The barrier to entry is lower than it looks from the outside. You don’t
