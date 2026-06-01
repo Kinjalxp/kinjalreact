@@ -46,7 +46,10 @@ const BlogPost = () => {
         <BlogComponent />
         <div className="flex justify-center mt-6 mb-4">
           <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={() => {
+              const scroller = document.querySelector(".overflow-y-auto");
+              if (scroller) scroller.scrollTo({ top: 0, behavior: "smooth" });
+            }}
             className="text-sm text-gray-400 hover:text-black transition-colors tracking-wide border-b border-gray-200 hover:border-gray-500 pb-0.5"
           >
             ↑ back to top
