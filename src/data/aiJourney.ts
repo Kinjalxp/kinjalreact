@@ -30,20 +30,22 @@ export const aiTopics: AITopic[] = [
   {
     slug: "algorithms",
     title: "Algorithms",
-    description: "Foundations of computation — efficiency, sorting, searching, and problem-solving strategies.",
+    description:
+      "Foundations of computation — efficiency, sorting, searching, and problem-solving strategies.",
     icon: "GitBranch",
     color: "blue",
     subtopics: [
       {
-        slug: "linear",
-        title: "Linear Algorithms",
-        description: "O(n) algorithms — linear search, traversal, and classic linear-time problems.",
+        slug: "linear-regression",
+        title: "Linear Regression",
+        description: "Single variable linear regression",
         component: Linear,
       },
       {
         slug: "regression",
         title: "Regression",
-        description: "Predicting continuous values — linear regression, gradient descent, and evaluation metrics.",
+        description:
+          "Predicting continuous values — linear regression, gradient descent, and evaluation metrics.",
         component: Regression,
       },
     ],
@@ -51,14 +53,16 @@ export const aiTopics: AITopic[] = [
   {
     slug: "machine-learning",
     title: "Machine Learning",
-    description: "Core ML concepts and intuitions — from linear models to ensemble methods.",
+    description:
+      "Core ML concepts and intuitions — from linear models to ensemble methods.",
     icon: "Brain",
     color: "green",
     subtopics: [
       {
         slug: "intro",
         title: "Introduction",
-        description: "Supervised, unsupervised, and reinforcement learning explained.",
+        description:
+          "Supervised, unsupervised, and reinforcement learning explained.",
         content: mlContent,
       },
     ],
@@ -66,7 +70,8 @@ export const aiTopics: AITopic[] = [
   {
     slug: "boosting",
     title: "Boosting",
-    description: "Ensemble methods that turn weak learners into strong predictors.",
+    description:
+      "Ensemble methods that turn weak learners into strong predictors.",
     icon: "TrendingUp",
     color: "orange",
     subtopics: [
@@ -81,14 +86,16 @@ export const aiTopics: AITopic[] = [
   {
     slug: "deep-learning",
     title: "Deep Learning",
-    description: "Neural networks, backpropagation, CNNs, and the transformer revolution.",
+    description:
+      "Neural networks, backpropagation, CNNs, and the transformer revolution.",
     icon: "Layers",
     color: "purple",
     subtopics: [
       {
         slug: "intro",
         title: "Introduction",
-        description: "Neurons, layers, activation functions, and backpropagation.",
+        description:
+          "Neurons, layers, activation functions, and backpropagation.",
         content: deepLearningContent,
       },
     ],
@@ -96,14 +103,16 @@ export const aiTopics: AITopic[] = [
   {
     slug: "ai-agents",
     title: "AI Agents",
-    description: "Systems that perceive, reason, and act — LLMs as autonomous problem-solvers.",
+    description:
+      "Systems that perceive, reason, and act — LLMs as autonomous problem-solvers.",
     icon: "Bot",
     color: "rose",
     subtopics: [
       {
         slug: "intro",
         title: "Introduction",
-        description: "The observe-think-act loop and what makes a system agentic.",
+        description:
+          "The observe-think-act loop and what makes a system agentic.",
         content: agentsContent,
       },
     ],
@@ -111,14 +120,16 @@ export const aiTopics: AITopic[] = [
   {
     slug: "agentic-ai",
     title: "Agentic AI",
-    description: "Autonomous, goal-directed AI — multi-agent architectures and orchestration.",
+    description:
+      "Autonomous, goal-directed AI — multi-agent architectures and orchestration.",
     icon: "Workflow",
     color: "indigo",
     subtopics: [
       {
         slug: "intro",
         title: "Introduction",
-        description: "What distinguishes agentic systems from simple LLM calls.",
+        description:
+          "What distinguishes agentic systems from simple LLM calls.",
         content: agenticContent,
       },
     ],
@@ -126,14 +137,16 @@ export const aiTopics: AITopic[] = [
   {
     slug: "rag",
     title: "RAG",
-    description: "Retrieval-Augmented Generation — grounding LLMs in real documents.",
+    description:
+      "Retrieval-Augmented Generation — grounding LLMs in real documents.",
     icon: "Database",
     color: "teal",
     subtopics: [
       {
         slug: "intro",
         title: "Introduction",
-        description: "The retriever-generator pipeline and why it beats fine-tuning for knowledge tasks.",
+        description:
+          "The retriever-generator pipeline and why it beats fine-tuning for knowledge tasks.",
         content: ragContent,
       },
     ],
