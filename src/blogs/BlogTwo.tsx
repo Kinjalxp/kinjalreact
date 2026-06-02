@@ -232,6 +232,7 @@ const BlogTwo = () => (
           show={true}
           color="#FFB3C6"
           strokeWidth={2}
+          multiline={true}
         >
           {" "}
           But it is one of the most accessible times we’ve ever had.
