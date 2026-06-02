@@ -220,17 +220,7 @@ const Linear = () => (
       image={img2}
       // imageAlt="Housing dataset preview"
     />
-    <Step
-      number={9}
-      title="Graph Best Fit Line"
-      description="Now let's graph the data with the line of best fit"
-      code={bestFit}
-      output={bestFitOutput}
-      //note=""
-      // Uncomment and set your image once you have it:
-      image={img2}
-      // imageAlt="Housing dataset preview"
-    />
+
     {/* Add more <Step> blocks below as you build out the notebook */}
     <div className="flex justify-center mt-6 mb-4">
       <button
