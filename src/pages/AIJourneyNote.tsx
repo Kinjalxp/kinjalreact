@@ -46,6 +46,9 @@ const AIJourneyNote = () => {
 
       {/* ── Content ── */}
       <article className="px-8 lg:px-14 py-10 max-w-3xl">
+        {subtopicData.component ? (
+          <subtopicData.component />
+        ) : (
         <ReactMarkdown
           components={{
             h1: ({ children }) => (
@@ -134,8 +137,9 @@ const AIJourneyNote = () => {
             ),
           }}
         >
-          {subtopicData.content}
+          {subtopicData.content ?? ""}
         </ReactMarkdown>
+        )}
       </article>
     </div>
   );

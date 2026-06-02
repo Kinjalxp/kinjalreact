@@ -1,5 +1,6 @@
-import algorithmsLinear from "../notes/algorithms/linear.md?raw";
-import algorithmsRegression from "../notes/algorithms/regression.md?raw";
+import type { ComponentType } from "react";
+import Linear from "../notes/algorithms/linear";
+import Regression from "../notes/algorithms/regression";
 
 import mlContent from "../notes/machine-learning/intro.md?raw";
 import boostingContent from "../notes/boosting/intro.md?raw";
@@ -12,7 +13,8 @@ export interface AISubtopic {
   slug: string;
   title: string;
   description: string;
-  content: string;
+  content?: string;
+  component?: ComponentType;
 }
 
 export interface AITopic {
@@ -36,13 +38,13 @@ export const aiTopics: AITopic[] = [
         slug: "linear",
         title: "Linear Algorithms",
         description: "O(n) algorithms — linear search, traversal, and classic linear-time problems.",
-        content: algorithmsLinear,
+        component: Linear,
       },
       {
         slug: "regression",
         title: "Regression",
         description: "Predicting continuous values — linear regression, gradient descent, and evaluation metrics.",
-        content: algorithmsRegression,
+        component: Regression,
       },
     ],
   },
