@@ -1,6 +1,6 @@
 import type { ComponentType } from "react";
 import Linear from "../notes/algorithms/linear";
-import Regression from "../notes/algorithms/regression";
+import Logistic from "../notes/algorithms/logistic";
 
 import mlContent from "../notes/machine-learning/intro.md?raw";
 import boostingContent from "../notes/boosting/intro.md?raw";
@@ -42,11 +42,11 @@ export const aiTopics: AITopic[] = [
         component: Linear,
       },
       {
-        slug: "regression",
-        title: "Regression",
+        slug: "logistic",
+        title: "Logistic Regression",
         description:
           "Predicting continuous values — linear regression, gradient descent, and evaluation metrics.",
-        component: Regression,
+        component: Logistic,
       },
     ],
   },

@@ -122,7 +122,7 @@ const Linear = () => (
     </p>
     <Step
       number={1}
-      title="Download imports"
+      title="Import Libraries"
       description="We start by importing libraries"
       code={loadLib}
       output={loadLibOutput}
