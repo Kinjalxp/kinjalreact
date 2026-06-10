@@ -1,6 +1,7 @@
 import type { ComponentType } from "react";
 import Linear from "../notes/algorithms/linear";
 import Logistic from "../notes/algorithms/logistic";
+import RandForest from "../notes/algorithms/randForest";
 
 import mlContent from "../notes/machine-learning/intro.md?raw";
 import boostingContent from "../notes/boosting/intro.md?raw";
@@ -47,6 +48,13 @@ export const aiTopics: AITopic[] = [
         description:
           "Predicting continuous values — linear regression, gradient descent, and evaluation metrics.",
         component: Logistic,
+      },
+      {
+        slug: "random-forest",
+        title: "Random Forest",
+        description:
+          "An ensemble of decision trees that improves accuracy and reduces overfitting.",
+        component: RandForest,
       },
     ],
   },
