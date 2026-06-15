@@ -2,6 +2,7 @@ import type { ComponentType } from "react";
 import Linear from "../notes/algorithms/linear";
 import Logistic from "../notes/algorithms/logistic";
 import RandForest from "../notes/algorithms/randForest";
+import SVM from "../notes/algorithms/svm";
 
 import mlContent from "../notes/machine-learning/intro.md?raw";
 import boostingContent from "../notes/boosting/intro.md?raw";
@@ -55,6 +56,13 @@ export const aiTopics: AITopic[] = [
         description:
           "An ensemble of decision trees that improves accuracy and reduces overfitting.",
         component: RandForest,
+      },
+      {
+        slug: "svm",
+        title: "Support Vector Machine",
+        description:
+          "Finding the optimal hyperplane that maximally separates classes in feature space.",
+        component: SVM,
       },
     ],
   },
