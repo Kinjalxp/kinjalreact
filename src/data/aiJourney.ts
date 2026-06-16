@@ -40,28 +40,29 @@ export const aiTopics: AITopic[] = [
       {
         slug: "linear-regression",
         title: "Linear Regression",
-        description: "Single variable linear regression",
+        description:
+          "Predict house prices by learning the relationship between a home's area and its price.",
         component: Linear,
       },
       {
         slug: "logistic",
         title: "Logistic Regression",
         description:
-          "Predicting continuous values — linear regression, gradient descent, and evaluation metrics.",
+          "Predict whether a person is likely to purchase insurance based on their age.",
         component: Logistic,
       },
       {
         slug: "random-forest",
         title: "Random Forest",
         description:
-          "An ensemble of decision trees that improves accuracy and reduces overfitting.",
+          "Classify handwritten digits (0–9) using image pixel data from Scikit-learn's Digits dataset.",
         component: RandForest,
       },
       {
         slug: "svm",
         title: "Support Vector Machine",
         description:
-          "Finding the optimal hyperplane that maximally separates classes in feature space.",
+          "Classify iris flower species using sepal and petal measurements from the Iris dataset.",
         component: SVM,
       },
     ],

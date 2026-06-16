@@ -5,6 +5,8 @@ import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import img1 from "../../assets/svmGraph1.png";
 import img2 from "../../assets/svmGraph2.png";
+import svmBanner from "../../assets/svmCaveman.png";
+import LightboxImage from "../../components/LightboxImage";
 
 type CodeBlockProps = {
   code: string;
@@ -131,10 +133,15 @@ const Step = ({
 const SVM = () => (
   <div className="px-2 sm:px-6 lg:px-20 py-8 animate-fadeIn">
     <h1 className="text-3xl font-bold mb-2">Support Vector Machine</h1>
-    <p className="text-gray-500 mb-8">
+    <p className="text-gray-500 mb-6">
       A step-by-step walkthrough of training an SVM classifier on the breast
       cancer dataset.
     </p>
+    <LightboxImage
+      src={svmBanner}
+      alt="Support vector machine overview"
+      className="rounded-lg border border-gray-200 w-full object-contain mb-8"
+    />
 
     <Step
       number={1}

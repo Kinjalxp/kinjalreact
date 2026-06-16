@@ -9,6 +9,8 @@ import img2 from "../../assets/RandForestImg2.png";
 import img3 from "../../assets/RandForestImg3.png";
 import img4 from "../../assets/RandForestImg4.png";
 import img5 from "../../assets/RandForestImg5.png";
+import randForestBanner from "../../assets/RandForestCaveman.png";
+import LightboxImage from "../../components/LightboxImage";
 
 type CodeBlockProps = {
   code: string;
@@ -135,10 +137,17 @@ const Step = ({
 const RandForest = () => (
   <div className="px-2 sm:px-6 lg:px-20 py-8 animate-fadeIn">
     <h1 className="text-3xl font-bold mb-2">Random Forest</h1>
-    <p className="text-gray-500 mb-8">
+    <p className="text-gray-500 mb-6">
       A step-by-step walkthrough of training a random forest classifier on the
       Titanic dataset.
     </p>
+    {
+      <LightboxImage
+        src={randForestBanner}
+        alt="Random forest overview"
+        className="rounded-lg border border-gray-200 w-full object-contain mb-8"
+      />
+    }
 
     <Step
       number={1}
