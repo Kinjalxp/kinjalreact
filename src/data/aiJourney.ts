@@ -3,6 +3,7 @@ import Linear from "../notes/algorithms/linear";
 import Logistic from "../notes/algorithms/logistic";
 import RandForest from "../notes/algorithms/randForest";
 import SVM from "../notes/algorithms/svm";
+import PCA from "../notes/algorithms/pca";
 
 import mlContent from "../notes/machine-learning/intro.md?raw";
 import boostingContent from "../notes/boosting/intro.md?raw";
@@ -64,6 +65,13 @@ export const aiTopics: AITopic[] = [
         description:
           "Classify iris flower species using sepal and petal measurements from the Iris dataset.",
         component: SVM,
+      },
+      {
+        slug: "pca",
+        title: "Principal Component Analysis",
+        description:
+          "Reducing high-dimensional data to its most informative components.",
+        component: PCA,
       },
     ],
   },
