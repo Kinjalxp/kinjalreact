@@ -4,6 +4,7 @@ import Logistic from "../notes/algorithms/logistic";
 import RandForest from "../notes/algorithms/randForest";
 import SVM from "../notes/algorithms/svm";
 import PCA from "../notes/algorithms/pca";
+import KNN from "../notes/algorithms/knn";
 
 import mlContent from "../notes/machine-learning/intro.md?raw";
 import boostingContent from "../notes/boosting/intro.md?raw";
@@ -72,6 +73,13 @@ export const aiTopics: AITopic[] = [
         description:
           "Reducing high-dimensional data to its most informative components.",
         component: PCA,
+      },
+      {
+        slug: "knn",
+        title: "K-Nearest Neighbors",
+        description:
+          "Classify iris flower species by majority vote among the closest training samples.",
+        component: KNN,
       },
     ],
   },
