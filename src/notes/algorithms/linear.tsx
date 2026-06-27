@@ -6,6 +6,8 @@ import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 // Replace this import with your actual screenshot
 import img1 from "../../assets/LinearRegGraph1.png";
 import img2 from "../../assets/LinearRegGraph2.png";
+import linearBanner from "../../assets/LinearRegCaveman.png";
+import LightboxImage from "../../components/LightboxImage";
 
 type CodeBlockProps = {
   code: string;
@@ -116,10 +118,18 @@ const Step = ({
 const Linear = () => (
   <div className="px-2 sm:px-6 lg:px-20 py-8 animate-fadeIn">
     <h1 className="text-3xl font-bold mb-2">Linear Regression</h1>
-    <p className="text-gray-500 mb-8">
+    <p className="text-gray-500 mb-6">
       A step-by-step walkthrough of training a linear regression model on
       housing data.
     </p>
+    {
+      <LightboxImage
+        src={linearBanner}
+        alt="Linear regression overview"
+        className="rounded-lg border border-gray-200 w-full object-contain mb-8"
+      />
+    }
+
     <Step
       number={1}
       title="Import Libraries"

@@ -4,7 +4,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import LightboxImage from "../../components/LightboxImage";
 
-import pcaBanner from "../../assets/pcaCaveman.png";
+import pcaBanner from "../../assets/PCAcaveman.png";
 import img1 from "../../assets/PCAimg1.png";
 // import img2 from "../../assets/PCAImg2.png";
 
