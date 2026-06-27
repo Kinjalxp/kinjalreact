@@ -5,6 +5,7 @@ import RandForest from "../notes/algorithms/randForest";
 import SVM from "../notes/algorithms/svm";
 import PCA from "../notes/algorithms/pca";
 import KNN from "../notes/algorithms/knn";
+import KMeans from "../notes/algorithms/kMeans";
 
 import mlContent from "../notes/machine-learning/intro.md?raw";
 import boostingContent from "../notes/boosting/intro.md?raw";
@@ -42,44 +43,48 @@ export const aiTopics: AITopic[] = [
       {
         slug: "linear-regression",
         title: "Linear Regression",
-        description:
-          "Predict house prices by learning the relationship between a home's area and its price.",
+        description: "Predict house prices using a home's area.",
         component: Linear,
       },
       {
         slug: "logistic",
         title: "Logistic Regression",
-        description:
-          "Predict whether a person is likely to purchase insurance based on their age.",
+        description: "Predict insurance purchase decisions based on age.",
         component: Logistic,
       },
       {
         slug: "random-forest",
         title: "Random Forest",
-        description:
-          "Classify handwritten digits (0–9) using image pixel data from Scikit-learn's Digits dataset.",
+        description: "Classify handwritten digits using image pixel data.",
         component: RandForest,
       },
       {
         slug: "svm",
         title: "Support Vector Machine",
         description:
-          "Classify iris flower species using sepal and petal measurements from the Iris dataset.",
+          "Classify iris flower species using sepal and petal measurements.",
         component: SVM,
       },
       {
         slug: "pca",
         title: "Principal Component Analysis",
         description:
-          "Reducing high-dimensional data to its most informative components.",
+          "Reduce the dimensionality of handwritten digit data while preserving important information.",
         component: PCA,
       },
       {
         slug: "knn",
         title: "K-Nearest Neighbors",
         description:
-          "Classify iris flower species by majority vote among the closest training samples.",
+          "Classify iris flower species based on their nearest neighbors.",
         component: KNN,
+      },
+      {
+        slug: "k-means",
+        title: "K-Means Clustering",
+        description:
+          "Group individuals into clusters based on their age and income.",
+        component: KMeans,
       },
     ],
   },
