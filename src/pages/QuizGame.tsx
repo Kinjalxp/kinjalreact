@@ -66,7 +66,7 @@ const toQuestion = (item: OpenTDBItem, index: number): Question => {
 
 const fetchQuestions = async (category: Category, signal: AbortSignal): Promise<Question[]> => {
   if (category === "ai-algorithms") {
-    return shuffle(aiAlgorithmsQuestions);
+    return shuffle(aiAlgorithmsQuestions).slice(0, 10);
   }
   const config = OPENTDB_CATEGORY[category];
   if (config === undefined) throw new Error(`No OpenTDB mapping for category: ${category}`);
