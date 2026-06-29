@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Trophy, RotateCcw, ArrowLeft, ChevronRight, Loader2, WifiOff } from "lucide-react";
-import { categoryInfo, type Category, type Question } from "../data/quiz";
+import { categoryInfo, aiAlgorithmsQuestions, type Category, type Question } from "../data/quiz";
 
 const OPTION_LABELS = ["A", "B", "C", "D"];
 
@@ -9,6 +9,7 @@ const progressGradient: Record<Category, string> = {
   technology: "from-blue-500 to-cyan-500",
   science: "from-emerald-500 to-teal-500",
   education: "from-orange-500 to-amber-500",
+  "ai-algorithms": "from-purple-500 to-indigo-500",
 };
 
 const getResultMessage = (score: number) => {
@@ -24,8 +25,8 @@ interface OpenTDBItem {
   incorrect_answers: string[];
 }
 
-// OpenTDB category IDs
-const OPENTDB_CATEGORY: Record<Category, number | number[]> = {
+// OpenTDB category IDs — "ai-algorithms" is served locally instead, see fetchQuestions
+const OPENTDB_CATEGORY: Partial<Record<Category, number | number[]>> = {
   technology: 18,  // Science: Computers
   science: 17,     // Science & Nature (no math)
   education: [22, 23], // Geography + History (5 each)
@@ -64,6 +65,9 @@ const toQuestion = (item: OpenTDBItem, index: number): Question => {
 };
 
 const fetchQuestions = async (category: Category, signal: AbortSignal): Promise<Question[]> => {
+  if (category === "ai-algorithms") {
+    return shuffle(aiAlgorithmsQuestions);
+  }
   const config = OPENTDB_CATEGORY[category];
   if (Array.isArray(config)) {
     // K-12: fetch Geography + History in parallel, combine and shuffle

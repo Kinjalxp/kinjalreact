@@ -18,6 +18,11 @@ const categoryStyles: Record<Category, { iconBg: string; accentBorder: string; b
     accentBorder: "hover:border-orange-300",
     button: "from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400",
   },
+  "ai-algorithms": {
+    iconBg: "bg-purple-100",
+    accentBorder: "hover:border-purple-300",
+    button: "from-purple-600 to-indigo-500 hover:from-purple-500 hover:to-indigo-400",
+  },
 };
 
 const Quiz = () => {

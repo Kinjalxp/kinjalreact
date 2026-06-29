@@ -6,6 +6,7 @@ import Quiz from "./pages/Quiz";
 import QuizGame from "./pages/QuizGame";
 import AIJourneyLayout from "./pages/AIJourneyLayout";
 import AIJourneyNote from "./pages/AIJourneyNote";
+import ScrollToTop from "./components/ScrollToTop";
 import { aiTopics } from "./data/aiJourney";
 import {
   User, BookOpen, Flame, Sparkles,
@@ -32,6 +33,7 @@ const navItems = [
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="h-screen flex flex-col overflow-hidden">
         {/* Desktop nav */}
         <nav className="flex-shrink-0 hidden md:flex gap-4 p-4 border-b bg-white">
