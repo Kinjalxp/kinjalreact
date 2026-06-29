@@ -69,6 +69,7 @@ const fetchQuestions = async (category: Category, signal: AbortSignal): Promise<
     return shuffle(aiAlgorithmsQuestions);
   }
   const config = OPENTDB_CATEGORY[category];
+  if (config === undefined) throw new Error(`No OpenTDB mapping for category: ${category}`);
   if (Array.isArray(config)) {
     // K-12: fetch Geography + History in parallel, combine and shuffle
     const [a, b] = await Promise.all([
