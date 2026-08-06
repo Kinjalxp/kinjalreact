@@ -26,7 +26,7 @@ export const blogs = [
     title: "How the Right Prompt Can Change Everything",
     component: "BlogThree",
     excerpt: "A look at how precise prompts quietly control AI behavior.",
-    date: "Coming Soon!",
+    date: "August 6, 2026",
     image:
       "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=250&fit=crop",
   },
