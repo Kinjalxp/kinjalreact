@@ -1,10 +1,10 @@
-import { RoughNotation } from "react-rough-notation";
 import lstmCaveman from "../../assets/LSTM_Caveman.png";
+import LightboxImage from "../../components/LightboxImage";
 
 const LSTM = () => (
   <div className="animate-fadeIn">
     <h1 className="text-3xl font-bold mb-4">Long Short-Term Memory (LSTM)</h1>
-    <img
+    <LightboxImage
       src={lstmCaveman}
       alt="LSTM explained caveman-style"
       className="w-full h-full object-cover rounded-lg mb-6"
