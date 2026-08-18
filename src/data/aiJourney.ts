@@ -6,6 +6,7 @@ import SVM from "../notes/algorithms/svm";
 import PCA from "../notes/algorithms/pca";
 import KNN from "../notes/algorithms/knn";
 import KMeans from "../notes/algorithms/kMeans";
+import LSTM from "../notes/deep-learning/LSTM";
 
 import mlContent from "../notes/machine-learning/intro.md?raw";
 import boostingContent from "../notes/boosting/intro.md?raw";
@@ -135,6 +136,13 @@ export const aiTopics: AITopic[] = [
         description:
           "Neurons, layers, activation functions, and backpropagation.",
         content: deepLearningContent,
+      },
+      {
+        slug: "lstm",
+        title: "LSTM",
+        description:
+          "Long Short-Term Memory networks — gates, cell state, and how they solve the vanishing gradient problem.",
+        component: LSTM,
       },
     ],
   },
