@@ -1,5 +1,6 @@
 import lstmCaveman from "../../assets/LSTM_Caveman.png";
 import LightboxImage from "../../components/LightboxImage";
+import { RoughNotation } from "react-rough-notation";
 
 const LSTM = () => (
   <div className="animate-fadeIn">
@@ -12,23 +13,45 @@ const LSTM = () => (
     <h2 className="text-xl font-semibold mb-4">What is LSTM?</h2>
     <p className="mb-4 relative">
       Long Short-Term Memory (LSTM) is a type of recurrent neural network (RNN)
-      designed to work with sequential data while addressing one of the major
-      limitations of traditional RNNs: difficulty remembering information over
-      long sequences.
+      designed to work with sequential data while addressing one of the{" "}
+      <RoughNotation
+        type="highlight"
+        show={true}
+        color="#8EB1D1  "
+        multiline={true}
+      >
+        {" "}
+        major limitations of traditional RNNs: difficulty remembering
+        information over long sequences.
+      </RoughNotation>
     </p>
     <p className="mb-4 relative">
       LSTMs are particularly useful when earlier information in a sequence is
-      important for understanding later information. Examples include
-      time-series forecasting, natural language processing, speech recognition,
-      and sequence prediction.
+      important for understanding later information.{" "}
+      <RoughNotation
+        type="underline"
+        show={true}
+        color="#8EB1D1  "
+        multiline={true}
+      >
+        Examples include time-series forecasting, natural language processing,
+        speech recognition, and sequence prediction.
+      </RoughNotation>
     </p>
     <h2 className="text-xl font-semibold mb-4">Why LSTM?</h2>
 
     <p className="mb-4 relative">
       Traditional RNNs process information sequentially and maintain a hidden
-      state that carries information from previous steps. However, as sequences
-      become longer, standard RNNs can struggle to preserve important
-      information from much earlier in the sequence.
+      state that carries information from previous steps. However,{" "}
+      <RoughNotation
+        type="highlight"
+        show={true}
+        color="#8EB1D1  "
+        multiline={true}
+      >
+        as sequences become longer, standard RNNs can struggle to preserve
+        important information from much earlier in the sequence.
+      </RoughNotation>
     </p>
     <p className="mb-4 relative">
       LSTMs solve this by giving the network an explicit way to carry
@@ -38,25 +61,47 @@ const LSTM = () => (
     </p>
     <p className="mb-4 relative">
       LSTMs address this problem by introducing a cell state and a set of gates
-      that control what information should be kept, added, or removed.
+      that{" "}
+      <RoughNotation
+        type="underline"
+        show={true}
+        color="#8EB1D1  "
+        multiline={true}
+      >
+        control what information should be kept, added, or removed.
+      </RoughNotation>
     </p>
     <h2 className="text-xl font-semibold mb-4">How Does an LSTM Work?</h2>
-    <p className="mb-4 relative">An LSTM cell uses three main gates:</p>
+    <p className="mb-4 relative">
+      An LSTM cell uses{" "}
+      <RoughNotation type="underline" show={true} color="#8EB1D1">
+        {" "}
+        three main gates:
+      </RoughNotation>
+    </p>
     <div className="mb-4 relative">
-      <ul className="list-disc pl-6 space-y-1 mb-4">
-        <li>
-          <strong>Forget Gate:</strong> Decides what information from the
-          previous cell state should be discarded.
-        </li>
-        <li>
-          <strong>Input Gate:</strong> Determines what new information should be
-          stored in the cell state.
-        </li>
-        <li>
-          <strong>Output Gate:</strong> Determines what information from the
-          cell state should be used to produce the current hidden state.
-        </li>
-      </ul>
+      <RoughNotation
+        type="bracket"
+        show={true}
+        color="#8EB1D1"
+        brackets={["left"]}
+        strokeWidth={2}
+      >
+        <ul className="list-disc pl-6 space-y-1 mb-4">
+          <li>
+            <strong>Forget Gate:</strong> Decides what information from the
+            previous cell state should be discarded.
+          </li>
+          <li>
+            <strong>Input Gate:</strong> Determines what new information should
+            be stored in the cell state.
+          </li>
+          <li>
+            <strong>Output Gate:</strong> Determines what information from the
+            cell state should be used to produce the current hidden state.
+          </li>
+        </ul>
+      </RoughNotation>
     </div>
     <p className="mb-4 relative">
       The cell state acts like a pathway for carrying important information
@@ -67,9 +112,19 @@ const LSTM = () => (
     <p className="mb-4 relative">
       I learned how LSTMs extend the idea of recurrent neural networks by giving
       the network more control over its memory. Instead of simply passing
-      information from one step to the next, an LSTM can selectively remember
-      important information and forget information that is no longer useful.
+      information from one step to the next, an{" "}
+      <RoughNotation
+        type="highlight"
+        show={true}
+        color="#8EB1D1  "
+        multiline={true}
+      >
+        {" "}
+        LSTM can selectively remember important information and forget
+        information that is no longer useful.
+      </RoughNotation>
     </p>
+
     <p className="mb-4 relative">
       This helped me understand why LSTMs can be more effective than traditional
       RNNs for sequences where relationships between events may span many time
